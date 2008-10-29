@@ -1,0 +1,126 @@
+form {
+    margin: 0;
+}
+p {
+margin: 0cm 0cm 0pt;
+
+}
+
+<!--
+a:link, a:visited, a:active {
+text-decoration: underline;
+}
+a:link {
+color:#265e92;
+}
+a:visited {
+color:#6390ba;
+}
+
+a:active {
+color:#bcc9d6;
+}
+a:hover {text-decoration: underline; 
+background:#c4e0fa; 
+color: #265e92;
+}
+-->
+
+
+.links {
+	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	color: #ff0000;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+.text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #305b81;
+	padding-left: 3pt;
+}
+
+.campoObrigatorio,.campoObrigatorioErro,.campoReadOnly,.campoObrigatorioErroArquivo    {
+	border: 1pt solid #336ca1;
+	color: #336ca1;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	list-style: disc;
+	font-size: 8pt;
+	margin: 1pt 1pt 1pt 1pt;
+	padding-left: 3pt;
+
+}
+.campoObrigatorioErro {
+	border: 1pt solid #ff0000;
+
+}
+.campoObrigatorioErroArquivo  {
+	border: 0.5pt solid #ff0000;
+
+}
+
+.campoNaoObrigatorio  {
+	border: 0.5pt solid #B4B7BC;
+	color: #336ca1;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	list-style: disc;
+	font-size: 8pt;
+	margin: 1pt 1pt 1pt 1pt;
+	padding-left: 3pt;
+
+}
+
+
+
+
+.campoReadOnly {
+	border: 0.5pt solid #336ca1;
+	background: #98b8d6;
+
+}
+.campoTitulo {
+	background-color:#8fbee8;
+	color: #ffffff;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	padding-left: 3pt;
+	border-width: 0pt;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+
+}
+
+
+
+.campoFormulario {
+	color: #abd7ff;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	height: 11pt;
+	padding-left: 3pt;
+	border-color: #ffffff;
+	border-style: solid;
+	border-width: 0pt;
+}
+.button
+{
+//	background: #ffffff;
+	background: #eff0f1;
+	border: 1pt solid #336ca1;
+	color: #336ca1;
+	font-family: Verdana, Helvetica, Sans-Serif;
+	font-size: 9pt;
+	margin: 1pt 1pt 1pt 1pt;
+
+}
+.atencao {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #ff0000;
+	text-align:center;
+}
