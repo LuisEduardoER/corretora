@@ -24,18 +24,18 @@ a:link, a:visited, a:active {
 text-decoration: underline;
 }
 a:link {
-color:#008145
+color:#94C2F5
 }
 a:visited {
-color:#008145
+color:#94C2F5
 }
 
 a:active {
-color:#00552D
+color:#94C2F5
 }
 a:hover {text-decoration: underline; 
-background:#B6E7B6; 
-color: #56BA79;
+background:#94C2F5; 
+color: #000099;
 }
 -->
 
@@ -44,7 +44,7 @@ color: #56BA79;
 	
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 7pt;
-	color: #ff0000;
+	color: #94C2F5;
 	font-style: normal;
 	font-weight: bold;
 	text-decoration: none;
@@ -53,7 +53,7 @@ color: #56BA79;
 BODY {
 
 
-	background-color: #FFFFFF;
+	background-color: #e7e7e7;
 }
 
 
@@ -146,7 +146,7 @@ TD.tituloTabelaBusca {
 }
 /* utilizada em campos dos formularios */
 TD.campoFormulario {
-	color: #003399;
+	color: #94C2F5;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 8pt;
 	height: 11pt;

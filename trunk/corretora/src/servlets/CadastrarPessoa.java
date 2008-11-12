@@ -1,7 +1,6 @@
 package servlets;
 
 import java.io.IOException;
-import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -30,21 +29,28 @@ public class CadastrarPessoa extends javax.servlet.http.HttpServlet implements
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-
 		PessoaFacade pesFacade = new PessoaFacade();
-	
+
 		Pessoa p = new Pessoa(null, request.getParameter("nome"), request
 				.getParameter("sobrenome"), request.getParameter("email"),
-				request.getParameter("telefone"), request.getParameter("celular"),
-				request.getParameter("tipo"), request.getParameter("login"),
-				request.getParameter("senha"));
+				request.getParameter("ddd") + "-"
+						+ request.getParameter("telefone"), request
+						.getParameter("dddcel")
+						+ "-" + request.getParameter("celular"), request
+						.getParameter("tipo"), request
+						.getParameter("logradouro"), request
+						.getParameter("complemento"), request
+						.getParameter("numero"),
+				request.getParameter("bairro"), request.getParameter("cidade"),
+				request.getParameter("estado"), request.getParameter("cep"),
+				request.getParameter("login"), request.getParameter("senha"));
 		try {
 			pesFacade.cadastrarPessoa(p);
-		
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			response.sendRedirect("inicial.html");
+			response.sendRedirect("cadastrosucesso.jsp");
 		}
 	}
 }

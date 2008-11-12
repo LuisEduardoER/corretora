@@ -4,8 +4,8 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 <title>Google Maps</title>
-<link rel="stylesheet" href="style.css" type="text/css" media="screen">
-<link rel="stylesheet" href="print.css" type="text/css" media="print">
+<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../css/print.css" type="text/css" media="print">
 
 <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAfemRxDBQs6xMED62nblSWRQYwmEMwlJGqmetnZCTk9br6F9pohRLet0IB3smP7DM-MBFsaYxvxTsyQ"
 type="text/javascript"></script>
