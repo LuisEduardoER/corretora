@@ -10,7 +10,9 @@
 <title>CORRETORA DE IMÓVEIS</title>
 <meta http-equiv="Content-Type"
 	content="text/html; charset=windows-1252">
-<link href="css/estilo.CSS" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="css/inicial.css" type="text/css">
+
 <script language="javascript" src="scripts/esconderObjeto.js"
 	type="text/javascript"></script>
 
@@ -108,7 +110,7 @@
 					</tr>
 					</table>
 				<iframe name="principal" width="769"
-					height="800" src="inicial.html" style="align: middle; border: 0"
+					height="800" src="inicial.jsp" style="align: middle; border: 0"
 					frameborder="0"></iframe>
 				</td>
 			</tr>
