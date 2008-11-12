@@ -5,26 +5,37 @@ public class Imovel {
 	private Integer id;
 	private String nome;
 	private String descricao;
+
 	private String logradouro;
+	private String complemento;
 	private String numero;
 	private String bairro;
+	private String cidade;
+	private String estado;
+	private String cep;
+
 	private String latitude;
 	private String longitude;
 	private Pessoa pessoa;
-	
+
 	public Imovel() {
 	}
 
 	public Imovel(Integer id, String nome, String descricao, String logradouro,
-			String numero, String bairro, String latitude, String longitude,
+			String complemento, String numero, String bairro, String cidade,
+			String estado, String cep, String latitude, String longitude,
 			Pessoa pessoa) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.descricao = descricao;
 		this.logradouro = logradouro;
+		this.complemento = complemento;
 		this.numero = numero;
 		this.bairro = bairro;
+		this.cidade = cidade;
+		this.estado = estado;
+		this.cep = cep;
 		this.latitude = latitude;
 		this.longitude = longitude;
 		this.pessoa = pessoa;
@@ -102,17 +113,36 @@ public class Imovel {
 		this.longitude = longitude;
 	}
 
-	public Imovel(Integer id, String nome, String descricao, String logradouro,
-			String numero, String bairro, String latitude, String longitude) {
-		super();
-		this.id = id;
-		this.nome = nome;
-		this.descricao = descricao;
-		this.logradouro = logradouro;
-		this.numero = numero;
-		this.bairro = bairro;
-		this.latitude = latitude;
-		this.longitude = longitude;
+	public String getComplemento() {
+		return complemento;
+	}
+
+	public void setComplemento(String complemento) {
+		this.complemento = complemento;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
 	}
 
 }

@@ -36,5 +36,18 @@
 	<servlet-mapping>
 		<servlet-name>CadastrarPessoa</servlet-name>
 		<url-pattern>/cadastrarpessoa</url-pattern>
-	</servlet-mapping>	
+	</servlet-mapping>
+	
+		<servlet>
+		<description></description>
+		<display-name>CadastrarImovel</display-name>
+		<servlet-name>CadastrarImovel</servlet-name>
+		<servlet-class>servlets.CadastrarImovel</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>CadastrarImovel</servlet-name>
+		<url-pattern>/cadastrarimovel</url-pattern>
+	</servlet-mapping>
+		
 </web-app>
