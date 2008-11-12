@@ -2,8 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <%
 
-request.getSession().setAttribute("login",null);
-request.getSession().removeAttribute("senha");
+request.getSession().setAttribute("usuario",null);
 response.sendRedirect("index.jsp");
 %>
 

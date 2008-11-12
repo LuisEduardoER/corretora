@@ -4,7 +4,11 @@ public class Pessoa {
 
 	private Integer id;
 	private String nome;
-	private String cpfCnpj;
+	private String sobreNome;
+	private String email;
+	private String telefone;
+	private String celular;
+
 	private String tipoPessoa;
 	private String login;
 	private String senha;
@@ -12,16 +16,24 @@ public class Pessoa {
 	public Pessoa() {
 	}
 
-	public Pessoa(Integer id, String nome, String cpfCnpj, String tipoPessoa,
-			String login, String senha) {
+
+
+	public Pessoa(Integer id, String nome, String sobreNome, String email,
+			String telefone, String celular, String tipoPessoa, String login,
+			String senha) {
 		super();
 		this.id = id;
 		this.nome = nome;
-		this.cpfCnpj = cpfCnpj;
+		this.sobreNome = sobreNome;
+		this.email = email;
+		this.telefone = telefone;
+		this.celular = celular;
 		this.tipoPessoa = tipoPessoa;
 		this.login = login;
 		this.senha = senha;
 	}
+
+
 
 	public Integer getId() {
 		return id;
@@ -39,13 +51,7 @@ public class Pessoa {
 		this.nome = nome;
 	}
 
-	public String getCpfCnpj() {
-		return cpfCnpj;
-	}
 
-	public void setCpfCnpj(String cpfCnpj) {
-		this.cpfCnpj = cpfCnpj;
-	}
 
 	public String getTipoPessoa() {
 		return tipoPessoa;
@@ -69,6 +75,38 @@ public class Pessoa {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+
+	public String getSobreNome() {
+		return sobreNome;
+	}
+
+	public void setSobreNome(String sobreNome) {
+		this.sobreNome = sobreNome;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	public String getCelular() {
+		return celular;
+	}
+
+	public void setCelular(String celular) {
+		this.celular = celular;
 	}
 
 }
