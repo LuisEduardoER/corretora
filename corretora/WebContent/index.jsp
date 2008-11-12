@@ -74,8 +74,8 @@
 						</td>
 						<td align="right"><a href="cadastro.jsp" target="principal">
 						<img border="0" alt="Home" src="images/home.gif" align="left" ></a></td>
-						<td align="right">
-						<img border="0" alt="Home" src="images/home.gif" align="left"></td>
+						<td align="right"><a href="cadastroimovel.jsp" target="principal">
+						<img border="0" alt="Home" src="images/home.gif" align="left"></a></td>
 						<td align="right">
 						<img border="0" alt="Home" src="images/home.gif" align="left"></td>
 						<td align="right">
