@@ -24,11 +24,11 @@
 	</tr>
 	<tr>
 		<td>Telefone: </td>
-		<td><input type="text" name="telefone" size="50"></td>
+		<td><input type="text" name="ddd" size="4" maxlength="3"> <input type="text"  maxlength="9" name="telefone" size="15"></td>
 	</tr>
 	<tr>
 		<td>Celular: </td>
-		<td><input type="text" name="celular" size="50"></td>
+		<td><input type="text" name="dddcel" size="4" maxlength="3"><input type="text" name="celular" size="15" maxlength="9"></td>
 	</tr>
 	<tr>
 		<td>Login: </td>
@@ -39,7 +39,7 @@
 		<td><input type="password" name="senha" size="50"></td>
 	</tr>
 	<tr>
-		<td colspan="2" align="center"><input type="submit" value="Cadastrar" ></td>
+		<td colspan="2" align="center"><input type="submit" value="Cadastrar" > <input type="button" value="voltar" ></td>
 	</tr>
 </table>
 </form>
