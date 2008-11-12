@@ -47,11 +47,11 @@ public class Login extends javax.servlet.http.HttpServlet implements
 		try {
 			if (contador == 3) {
 				p = pesFacade.pequisarLogin(pLogin, pSenha);
-				if (p.getNome().length() > 0) {
-					request.getSession()
-							.setAttribute("nomeLogado", p.getNome());
+				if (p != null) {
+					request.getSession().setAttribute("usuario", p);
+
 				} else {
-					request.getSession().setAttribute("nomeLogado", null);
+					request.getSession().setAttribute("usuario", null);
 				}
 			}
 		} catch (SQLException e) {
@@ -61,7 +61,7 @@ public class Login extends javax.servlet.http.HttpServlet implements
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			response.sendRedirect("index.jsp?erro="+contador);
+			response.sendRedirect("index.jsp?erro=" + contador);
 		}
 	}
 }

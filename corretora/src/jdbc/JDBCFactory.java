@@ -8,7 +8,7 @@ import util.Dominios;
 
 public class JDBCFactory {
 	
-	public static Connection getConecao() throws SQLException, ClassNotFoundException  {
+	public static Connection getConexao() throws SQLException, ClassNotFoundException  {
 		Class c = Class.forName("com.mysql.jdbc.Driver");
 	
 		Connection conn = DriverManager.getConnection(

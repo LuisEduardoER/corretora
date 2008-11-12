@@ -3,6 +3,7 @@
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
+<%@page import="vo.Pessoa"%>
 <html>
 <head>
 <meta http-equiv="Content-Language" content="pt-br">
@@ -33,13 +34,13 @@
 					src="images/leftbar.gif" width="359" height="39"></td>
 				<td align="right" bgcolor="#336CA1">
 				<%
-					if (request.getSession().getAttribute("nomeLogado") != null) {
-
+					if (request.getSession().getAttribute("usuario") != null) {
+						Pessoa p = (Pessoa)request.getSession().getAttribute("usuario");
 						out
 								.write("<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"2\">"
 										+ "<tr><td width=\"381\" class=\"campoFormulario\"><p align=\"right\">"
 										+ "Bem vindo, "
-										+ request.getSession().getAttribute("nomeLogado").toString()
+										+ p.getNome() + " " + p.getSobreNome()
 										+ "  [<a href=\"logout.jsp\">Sair</a>] </td></tr></table>");
 
 					}else{
@@ -69,8 +70,8 @@
 					<tr>
 						<td align="right" width="3">
 						</td>
-						<td align="right">
-						<img border="0" alt="Home" src="images/home.gif" align="left"></td>
+						<td align="right"><a href="cadastro.jsp" target="principal">
+						<img border="0" alt="Home" src="images/home.gif" align="left" ></a></td>
 						<td align="right">
 						<img border="0" alt="Home" src="images/home.gif" align="left"></td>
 						<td align="right">
