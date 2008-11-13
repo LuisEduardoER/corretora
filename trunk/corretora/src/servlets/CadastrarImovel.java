@@ -38,7 +38,7 @@ public class CadastrarImovel extends javax.servlet.http.HttpServlet implements
 				request.getParameter("bairro"), request.getParameter("cidade"),
 				request.getParameter("estado"), request.getParameter("cep"),
 				request.getParameter("latitude"), request
-						.getParameter("longitude"), null);
+						.getParameter("longitude"), null,null);
 
 		try {
 			imovelFacade.cadastrarImovel(i);

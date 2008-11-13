@@ -21,7 +21,7 @@ public class JDBCImovel {
 					.prepareStatement("INSERT INTO imovel (imo_nome, imo_descricao, imo_logradouro,imo_complemento,"
 							+ " imo_numero, imo_bairro, imo_cidade"
 							+ ",imo_estado,imo_cep,imo_latitude,imo_longitude)"
-							+ " VALUES(?,?,?,?,?,?,?,?,?,?,?)");
+							+ " VALUES(?,?,?,?,?,?,?,?,?,?,?,?)");
 			ps.setString(1, i.getNome());
 			ps.setString(2, i.getDescricao());
 			ps.setString(3, i.getLogradouro());
@@ -33,7 +33,7 @@ public class JDBCImovel {
 			ps.setString(9, i.getCep());
 			ps.setString(10, i.getLatitude());
 			ps.setString(11, i.getLongitude());
-
+			ps.setString(12, i.getPasta());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -68,7 +68,7 @@ public class JDBCImovel {
 								.getString("imo_estado"), rs
 								.getString("imo_cep"), rs
 								.getString("imo_latitude"), rs
-								.getString("imo_longitude"), null);
+								.getString("imo_longitude"), null,rs.getString("imo_pasta"));
 				
 				colImoveis.add(i);
 			}
