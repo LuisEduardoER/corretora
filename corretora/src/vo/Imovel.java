@@ -18,13 +18,23 @@ public class Imovel {
 	private String longitude;
 	private Pessoa pessoa;
 
+	private String pasta;
+	
 	public Imovel() {
+	}
+
+	public String getPasta() {
+		return pasta;
+	}
+
+	public void setPasta(String pasta) {
+		this.pasta = pasta;
 	}
 
 	public Imovel(Integer id, String nome, String descricao, String logradouro,
 			String complemento, String numero, String bairro, String cidade,
 			String estado, String cep, String latitude, String longitude,
-			Pessoa pessoa) {
+			Pessoa pessoa, String pasta) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -39,6 +49,7 @@ public class Imovel {
 		this.latitude = latitude;
 		this.longitude = longitude;
 		this.pessoa = pessoa;
+		this.pasta = pasta;
 	}
 
 	public Pessoa getPessoa() {
