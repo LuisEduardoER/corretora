@@ -7,15 +7,13 @@
 	content="text/html; charset=windows-1252">
 <title>Nova pagina 1</title>
 <link rel="stylesheet" href="css/estilo.css" type="text/css">
-
+<script language="JavaScript" type="text/JavaScript" src="js/util.js"></script>
 
 	</head>
 
-
-
 <body bgcolor="FFFFFF">
 <div align="center">
-<form action="/corretora/cadastrarimovel"  name="setLatLon" method="post">
+<form action="/corretora/cadastrarimovel"  name="formImovel" method="post">
 <table width="90%" border="0"
 	style="border-style: solid; border-collapse: collapse" cellpadding="0">
 	<tr>
@@ -36,7 +34,7 @@
 			<tr>
 				<td class="campoFormulario" valign="top">Descrição:</td>
 				<td width="85%" class="campoFormulario">
-				<textarea rows="8" cols="120" name="descricao" class="campoObrigatorio" ></textarea>
+				<textarea rows="8" cols="80" name="descricao" class="campoObrigatorio" ></textarea>
 				</td>
 			</tr>
 
@@ -102,19 +100,18 @@
 		<table width="99%" border="0"
 			style="border-style: solid; border-collapse: collapse"
 			cellpadding="0">
-			<tr>
-				<td width="142" class="campoFormulario">
-		
-			
-  </td>
-			</tr>
+
 			<tr>
 				<td class="campoFormulario">Latitude:</td>
-				<td width="85%" class="campoFormulario"><input type='text' value='-3.107863' name='lat' id="frmLat"></td>
+				<td width="20%" class="campoFormulario"><input type="text" readonly class="campoObrigatorio" name="latitude"  size="30"  id="frmLat"></td>
+				
 			</tr>
 			<tr>
 				<td class="campoFormulario">Longitude:</td>
-				<td width="85%" class="campoFormulario"><input type='text' name='lon' value='-60.026464' id="frmLon"></td>
+				<td width="85%" class="campoFormulario"><input type="text"  readonly class="campoObrigatorio" name="longitude"  size="30" id="frmLon"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right" class="campoFormulario">Para adicionar informações de latitude e longitude <a href="#" onclick="javascript:novaJanela('teste.jsp','buscar',500,500,0);">clique aqui</a></td>
 			</tr>
 		</table>
 

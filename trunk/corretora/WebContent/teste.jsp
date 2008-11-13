@@ -29,6 +29,15 @@
 			behavior:url(#default#VML);
 		}
 		</style>
+		<script >
+			function enviar(){
+				
+				window.opener.document.formImovel.latitude.value = document.getElementById("frmLat").value;
+				window.opener.document.formImovel.longitude.value = document.getElementById("frmLon").value;
+				window.close();
+			}
+		</script>
+    	
     	<script src="http://maps.google.com/maps?file=api&v=2&key=ABQIAAAAF4PVqw0p5l92pEmE39k0MRQWxhPw7-SAnMb84NfHs4vQ3HTp4BTb-yeL6fQg7Up9d9idBGy5naXydw" type="text/javascript"></script>
 		<title>Google Maps Latitude, Longitude Popup</title>
 
@@ -36,17 +45,17 @@
 	<body>
 		
 		<div id="map" style="width: 450px; height: 300px"></div>
-		<div id="geo" style="width: 300px;position: absolute;left: 620px;top: 100px;" class="tekst">
-		<form name="setLatLon" action="googleMapLocation.php">
-			<b>* Coordinates:</b><br />
-
+		<div id="geo" style="width: 300px;position: absolute;left: 150px; top: 350px" class="tekst">
+		
+			<b>Coordenadas:</b><br />
+	<form action="" name="formBusca">
 			<table>
-				<tr><td>* Lat:</td><td><input type='text' name='lat' id="frmLat"></td></tr>
-				<tr><td>* Lon:</td><td><input type='text' name='lon' id="frmLon"></td></tr>
+				<tr><td>Lat:</td><td><input type='text' name='lat' id="frmLat"></td></tr>
+				<tr><td>Lon:</td><td><input type='text' name='lon' id="frmLon"></td></tr>
 			</table>
-			<input type="submit" name="setLatLon" value="Set"><br />
-		</form><br />
-        
+			<button type="button" name="setLatLon" onclick="enviar();">Selecionar</button><br />
+		<br />
+        </form>
 		
 		<br />
         

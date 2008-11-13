@@ -18,11 +18,12 @@
 <meta http-equiv="Content-Type"
 	content="text/html; charset=windows-1252">
 <title>Imóveis</title>
+<link rel="stylesheet" href="css/estilo.css" type="text/css">
 </head>
 
 <body bgcolor="FFFFFF">
 <div align="center">
-<table width="99%" border="1" cellspacing="0" cellpadding="0"
+<table width="99%" border="0" cellspacing="0" cellpadding="0"
 	style="border-collapse: collapse" bordercolor="#000000">
 
 	<%
@@ -36,23 +37,24 @@
 
 			Imovel im = (Imovel) i.next();
 			out
-					.println("<table width=\"99%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" 	style=\"border-collapse: collapse\" bordercolor=\"#000000\">");
+					.println("<br/><table width=\"99%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" 	style=\"border-collapse: collapse\" bordercolor=\"#000000\">");
 			out.println("<tr>");
-			out
-					.println("<td align=center><img src=images/Fotos/"+im.getPasta()+"/principal.jpg");
-			out.println("style=\"width: 255px; height: 148px;\" /></td>");
+			out.println("<td align=center><img src=images/Fotos/"
+					+ im.getPasta() + "/principal.jpg");
+			out.println("style=\"width: 200px; height: 148px;\" /></td>");
 			out.println("</tr>");
 
 			out.println("<tr>");
-			out.println("<td align=\"center\">" + im.getNome()
+			out.println("<td  class=\"campoFormulario\" align=\"center\"><br/>" + im.getNome().toUpperCase() + ", "
+					+ im.getCidade().toUpperCase() + " - " + im.getEstado().toUpperCase() + " [<a href=\"/corretora/informacoes.jsp?codigo="+im.getId()+"\">Saiba Mais</a>]"
 					+ "</td></tr></table>");
-			
+
 			out.println("</td>");
-			
+
 			x++;
-			if (x==4){
+			if (x == 4) {
 				out.println("</tr>");
-				x=1;
+				x = 1;
 			}
 		}
 	%>
