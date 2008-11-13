@@ -46,18 +46,16 @@ public class JDBCImovel {
 
 	public Collection<Imovel> listarImoveis() throws SQLException,
 			ClassNotFoundException {
-		
+
 		Collection<Imovel> colImoveis = new ArrayList<Imovel>();
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		Connection conn = JDBCFactory.getConexao();
 		try {
-			ps = conn
-					.prepareStatement("SELECT * FROM  imovel ");
+			ps = conn.prepareStatement("SELECT * FROM  imovel ");
 
-		
 			rs = ps.executeQuery();
-			while (rs.next()){
+			while (rs.next()) {
 				Imovel i = new Imovel(new Integer(rs.getString("imo_id")), rs
 						.getString("imo_nome"), rs.getString("imo_descricao"),
 						rs.getString("imo_logradouro"), rs
@@ -68,8 +66,9 @@ public class JDBCImovel {
 								.getString("imo_estado"), rs
 								.getString("imo_cep"), rs
 								.getString("imo_latitude"), rs
-								.getString("imo_longitude"), null,rs.getString("imo_pasta"));
-				
+								.getString("imo_longitude"), null, rs
+								.getString("imo_pasta"));
+
 				colImoveis.add(i);
 			}
 		} catch (SQLException e) {
