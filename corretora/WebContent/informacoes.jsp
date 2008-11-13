@@ -1,5 +1,3 @@
-
-
 <html>
 
 <head>
@@ -7,21 +5,17 @@
 	content="text/html; charset=windows-1252">
 <title>Nova pagina 1</title>
 <link rel="stylesheet" href="css/estilo.css" type="text/css">
-
-
-	</head>
-
-
+</head>
 
 <body bgcolor="FFFFFF">
 <div align="center">
-<form action="/corretora/cadastrarimovel"  name="setLatLon" method="post">
+<form action="/corretora/cadastrarpessoa" method="post">
 <table width="90%" border="0"
 	style="border-style: solid; border-collapse: collapse" cellpadding="0">
 	<tr>
 		<td>
-		<fieldset class="títulos"><legend>INFORMAÇÕES DO
-		ANUNCIO</legend>
+		<fieldset class="títulos"><legend>INFORMAÇÕES
+		PESSOAIS</legend>
 
 
 
@@ -34,12 +28,29 @@
 					name="nome" size="50" class="campoObrigatorio"></td>
 			</tr>
 			<tr>
-				<td class="campoFormulario" valign="top">Descrição:</td>
-				<td width="85%" class="campoFormulario">
-				<textarea rows="8" cols="120" name="descricao" class="campoObrigatorio" ></textarea>
-				</td>
+				<td class="campoFormulario">Sobrenome:</td>
+				<td width="85%" class="campoFormulario"><input type="text"
+					name="sobrenome" size="50" class="campoObrigatorio"></td>
 			</tr>
-
+			<tr>
+				<td class="campoFormulario">E-mail:</td>
+				<td width="85%" class="campoFormulario"><input type="text"
+					name="email" size="50" class="campoObrigatorio"></td>
+			</tr>
+			<tr>
+				<td class="campoFormulario">Telefone:</td>
+				<td width="85%" class="campoFormulario"><input type="text"
+					name="ddd" size="4" maxlength="3" class="campoObrigatorio"><input
+					type="text" class="campoObrigatorio" maxlength="9" name="telefone"
+					size="15"></td>
+			</tr>
+			<tr>
+				<td class="campoFormulario">Celular:</td>
+				<td width="85%" class="campoFormulario"><input type="text"
+					name="dddcel" size="4" maxlength="3" class="campoObrigatorio"><input
+					type="text" name="celular" size="15" maxlength="9"
+					class="campoObrigatorio"></td>
+			</tr>
 		</table>
 		</fieldset>
 
@@ -90,12 +101,12 @@
 			<tr>
 				<td class="campoFormulario">CEP:</td>
 				<td width="85%" class="campoFormulario"><input type="text"
-					name="cep" size="15" maxlength="10" class="campoObrigatorio"></td>
-			</tr>
+					name="cep"   size="15" maxlength="10" class="campoObrigatorio"></td>
+			</tr>			
 		</table>
 		</fieldset>
 		<fieldset class="títulos"><legend>INFORMAÇÕES DE
-		LOCALIZAÇÃO</legend>
+		LOGIN</legend>
 
 
 
@@ -103,18 +114,19 @@
 			style="border-style: solid; border-collapse: collapse"
 			cellpadding="0">
 			<tr>
-				<td width="142" class="campoFormulario">
-		
-			
-  </td>
+				<td width="142" class="campoFormulario">Login:</td>
+				<td width="85%" class="campoFormulario"><input type="text"
+					name="login" size="15" maxlength="15" class="campoObrigatorio"></td>
 			</tr>
 			<tr>
-				<td class="campoFormulario">Latitude:</td>
-				<td width="85%" class="campoFormulario"><input type='text' value='-3.107863' name='lat' id="frmLat"></td>
+				<td class="campoFormulario">Senha:</td>
+				<td width="85%" class="campoFormulario"><input type="text"
+					name="senha" size="10" class="campoObrigatorio"></td>
 			</tr>
 			<tr>
-				<td class="campoFormulario">Longitude:</td>
-				<td width="85%" class="campoFormulario"><input type='text' name='lon' value='-60.026464' id="frmLon"></td>
+				<td class="campoFormulario" nowrap>Repetir Senha:</td>
+				<td width="85%" class="campoFormulario"><input type="text"
+					name="repetisenha" size="10" class="campoObrigatorio"></td>
 			</tr>
 		</table>
 
@@ -124,7 +136,7 @@
 		</fieldset>
 
 
-		<div align="center">
+	<div align="center">
 		<table width="99%" border="0"
 			style="border-style: solid; border-collapse: collapse"
 			cellpadding="0">
@@ -137,7 +149,7 @@
 				</td>
 			</tr>
 		</table>
-		</div>
+	</div>
 		</td>
 	</tr>
 </table>
