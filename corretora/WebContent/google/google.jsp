@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+	
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
@@ -19,8 +22,8 @@ type="text/javascript"></script>
 
 */
   function init() {
-  	loadAtStart(-3.107863,-60.026464, 15);
-    addAddress('-3.100909, -60.00925');
+  	loadAtStart(<% out.print(request.getParameter("lat"));%>,<% out.print(request.getParameter("lon"));%>, 15);
+    addAddress('<% out.print(request.getParameter("lat"));%>,<% out.print(request.getParameter("lon"));%>');
 
 
 }
@@ -49,7 +52,7 @@ function toggle(divId) {
 
     <td class="l"></td>
     <td class="m">
-      <h2>Google Maps - Resolvendo o Caminho</h2>
+      <h2>CHEGANDO NO IMÓVEL</h2>
     <div id="map" class="myMap"></div><br><br>
     <div id="buttonArea">
     <div align="center"><form name="address" onSubmit="clickedAddAddress(); return false;">

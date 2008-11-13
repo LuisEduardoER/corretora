@@ -141,6 +141,7 @@ div.my_textual_div {
 div.myMap {
     width: 600px;
     height: 480px;
+    top: 500px
     margin-left: auto;
     margin-right: auto;
 }

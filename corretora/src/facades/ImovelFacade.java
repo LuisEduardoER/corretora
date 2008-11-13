@@ -10,6 +10,23 @@ import vo.Imovel;
 
 public class ImovelFacade extends SuperFacade {
 
+	public Imovel buscarImovelPorPK(Integer pId) {
+		JDBCImovel imovelDao = new JDBCImovel();
+		Imovel i = new Imovel();
+
+		try {
+
+			i = imovelDao.buscarImovelPorPK(pId);
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+
+			e.printStackTrace();
+		}
+		return i;
+	}
+
 	public void cadastrarImovel(Imovel i) {
 		JDBCImovel imovelDao = new JDBCImovel();
 		try {
@@ -30,7 +47,7 @@ public class ImovelFacade extends SuperFacade {
 		Collection<Imovel> colImovel = new ArrayList<Imovel>();
 		try {
 
-			colImovel =  imovelDao.listarImoveis();
+			colImovel = imovelDao.listarImoveis();
 		} catch (SQLException e) {
 
 			e.printStackTrace();
@@ -38,7 +55,7 @@ public class ImovelFacade extends SuperFacade {
 
 			e.printStackTrace();
 		}
-		
+
 		return colImovel;
 
 	}

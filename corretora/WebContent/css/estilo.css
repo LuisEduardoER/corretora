@@ -24,18 +24,18 @@ a:link, a:visited, a:active {
 text-decoration: underline;
 }
 a:link {
-color:#008145
+color:#94C2F5
 }
 a:visited {
-color:#008145
+color:#94C2F5
 }
 
 a:active {
-color:#00552D
+color:#94C2F5
 }
 a:hover {text-decoration: underline; 
-background:#B6E7B6; 
-color: #56BA79;
+background:#94C2F5; 
+color: #000099;
 }
 -->
 

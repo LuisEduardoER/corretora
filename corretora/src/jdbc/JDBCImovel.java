@@ -20,7 +20,7 @@ public class JDBCImovel {
 			ps = conn
 					.prepareStatement("INSERT INTO imovel (imo_nome, imo_descricao, imo_logradouro,imo_complemento,"
 							+ " imo_numero, imo_bairro, imo_cidade"
-							+ ",imo_estado,imo_cep,imo_latitude,imo_longitude)"
+							+ ",imo_estado,imo_cep,imo_latitude,imo_longitude,imo_pasta)"
 							+ " VALUES(?,?,?,?,?,?,?,?,?,?,?,?)");
 			ps.setString(1, i.getNome());
 			ps.setString(2, i.getDescricao());
@@ -79,6 +79,45 @@ public class JDBCImovel {
 			this.fecharRecursos(null, ps);
 		}
 		return colImoveis;
+	}
+
+	public Imovel buscarImovelPorPK(Integer pId) throws SQLException,
+	ClassNotFoundException {
+
+		Imovel i = new Imovel();
+
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		Connection conn = JDBCFactory.getConexao();
+
+		try {
+			ps = conn
+					.prepareStatement("SELECT * FROM  imovel i WHERE i.imo_id = ?");
+			ps.setInt(1, pId);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				i = new Imovel(new Integer(rs.getString("imo_id")), rs
+						.getString("imo_nome"), rs.getString("imo_descricao").toLowerCase().replace("\\n\\t", "<br/><tab>"),
+						rs.getString("imo_logradouro"), rs
+								.getString("imo_complemento"), rs
+								.getString("imo_numero"), rs
+								.getString("imo_bairro"), rs
+								.getString("imo_cidade"), rs
+								.getString("imo_estado"), rs
+								.getString("imo_cep"), rs
+								.getString("imo_latitude"), rs
+								.getString("imo_longitude"), null, rs
+								.getString("imo_pasta"));
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			this.fecharRecursos(null, ps);
+		}
+		return i;
 	}
 
 	private void fecharRecursos(ResultSet rs, PreparedStatement ps) {

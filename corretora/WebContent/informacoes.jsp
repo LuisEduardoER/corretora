@@ -1,160 +1,77 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+
+<%
+	ImovelFacade imovelFacade = new ImovelFacade();
+	Imovel i = new Imovel();
+	i = imovelFacade.buscarImovelPorPK(new Integer(request
+			.getParameter("codigo")));
+%>
+<%@page import="facades.ImovelFacade"%>
+<%@page import="vo.Imovel"%>
 <html>
 
 <head>
 <meta http-equiv="Content-Type"
 	content="text/html; charset=windows-1252">
-<title>Nova pagina 1</title>
+<title>INFORMAÇÃO</title>
 <link rel="stylesheet" href="css/estilo.css" type="text/css">
+<script language="JavaScript" type="text/JavaScript" src="js/util.js"></script>
+
+
 </head>
 
-<body bgcolor="FFFFFF">
-<div align="center">
-<form action="/corretora/cadastrarpessoa" method="post">
-<table width="90%" border="0"
-	style="border-style: solid; border-collapse: collapse" cellpadding="0">
+<body onload='init()' onunload='GUnload()'bgcolor="FFFFFF">
+
+
+
+		<div style="width: 300px; position: absolute; left: 52px; top: 31px;">
+		<img
+			src="/corretora/images/Fotos/<% out.println(i.getPasta()); %>/principal.jpg"
+			width="300" height="228" /></div>
+			<div style="width: 300px; position: absolute; left: 52px; top: 331px;" >
+			<table border="0" width="95%" cellpadding="0" style="border-collapse: collapse" >
+				<tr>
+					<td width="460" class="campoFormulario">Para ver como chegar nesse imóvel <a href="google/google.jsp?lat=<%out.print(i.getLatitude()); %>&lon=<% out.print(i.getLongitude()); %>">clique aqui</a></td>
+				</tr>
+			</table>
+			</div>		
+<div style="position: absolute;top: 31px;left : 400px; width : 358px;">
+<table border="0" width="95%" cellpadding="0" style="border-collapse: collapse" >
+
+		<tr>
+		<td width="460" class="títulos">
+		<%
+			out.println(i.getNome().toUpperCase());
+		%>
+		</td>
+	</tr>
+
 	<tr>
-		<td>
-		<fieldset class="títulos"><legend>INFORMAÇÕES
-		PESSOAIS</legend>
-
-
-
-		<table width="99%" border="0"
-			style="border-style: solid; border-collapse: collapse"
-			cellpadding="0">
-			<tr>
-				<td width="140" class="campoFormulario">Nome:</td>
-				<td width="85%" class="campoFormulario"><input type="text"
-					name="nome" size="50" class="campoObrigatorio"></td>
-			</tr>
-			<tr>
-				<td class="campoFormulario">Sobrenome:</td>
-				<td width="85%" class="campoFormulario"><input type="text"
-					name="sobrenome" size="50" class="campoObrigatorio"></td>
-			</tr>
-			<tr>
-				<td class="campoFormulario">E-mail:</td>
-				<td width="85%" class="campoFormulario"><input type="text"
-					name="email" size="50" class="campoObrigatorio"></td>
-			</tr>
-			<tr>
-				<td class="campoFormulario">Telefone:</td>
-				<td width="85%" class="campoFormulario"><input type="text"
-					name="ddd" size="4" maxlength="3" class="campoObrigatorio"><input
-					type="text" class="campoObrigatorio" maxlength="9" name="telefone"
-					size="15"></td>
-			</tr>
-			<tr>
-				<td class="campoFormulario">Celular:</td>
-				<td width="85%" class="campoFormulario"><input type="text"
-					name="dddcel" size="4" maxlength="3" class="campoObrigatorio"><input
-					type="text" name="celular" size="15" maxlength="9"
-					class="campoObrigatorio"></td>
-			</tr>
-		</table>
-		</fieldset>
-
-		<fieldset class="títulos"><legend>INFORMAÇÕES DE
-		ENDEREÇO </legend>
-
-
-
-		<table width="99%" border="0"
-			style="border-style: solid; border-collapse: collapse"
-			cellpadding="0">
-			<tr>
-				<td width="141" class="campoFormulario">Logradouro:</td>
-				<td width="85%" class="campoFormulario"><input type="text"
-					name="logradouro" size="50" maxlength="100"
-					class="campoObrigatorio"></td>
-			</tr>
-			<tr>
-				<td class="campoFormulario">Complemento:</td>
-				<td width="85%" class="campoFormulario"><input type="text"
-					name="complemento" size="50" maxlength="100"
-					class="campoObrigatorio"></td>
-			</tr>
-			<tr>
-				<td class="campoFormulario">Número:</td>
-				<td width="85%" class="campoFormulario"><input type="text"
-					name="numero" size="15" maxlength="20" class="campoObrigatorio"></td>
-			</tr>
-			<tr>
-				<td class="campoFormulario">Bairro:</td>
-				<td width="85%" class="campoFormulario"><input type="text"
-					maxlength="30" name="bairro" size="30" class="campoObrigatorio"></td>
-			</tr>
-			<tr>
-				<td class="campoFormulario">Cidade:</td>
-				<td width="85%" class="campoFormulario"><input type="text"
-					name="cidade" size="40" maxlength="40" class="campoObrigatorio"></td>
-			</tr>
-			<tr>
-				<td class="campoFormulario">Estado:</td>
-				<td width="85%" class="campoFormulario"><select name="estado"
-					class="campoObrigatorio">
-					<option value="Amazonas">Amazonas</option>
-					<option value="São Paulo">São Paulo</option>
-					<option value="Rio de Janeiro">Rio de Janeiro</option>
-				</select></td>
-			</tr>
-			<tr>
-				<td class="campoFormulario">CEP:</td>
-				<td width="85%" class="campoFormulario"><input type="text"
-					name="cep"   size="15" maxlength="10" class="campoObrigatorio"></td>
-			</tr>			
-		</table>
-		</fieldset>
-		<fieldset class="títulos"><legend>INFORMAÇÕES DE
-		LOGIN</legend>
-
-
-
-		<table width="99%" border="0"
-			style="border-style: solid; border-collapse: collapse"
-			cellpadding="0">
-			<tr>
-				<td width="142" class="campoFormulario">Login:</td>
-				<td width="85%" class="campoFormulario"><input type="text"
-					name="login" size="15" maxlength="15" class="campoObrigatorio"></td>
-			</tr>
-			<tr>
-				<td class="campoFormulario">Senha:</td>
-				<td width="85%" class="campoFormulario"><input type="text"
-					name="senha" size="10" class="campoObrigatorio"></td>
-			</tr>
-			<tr>
-				<td class="campoFormulario" nowrap>Repetir Senha:</td>
-				<td width="85%" class="campoFormulario"><input type="text"
-					name="repetisenha" size="10" class="campoObrigatorio"></td>
-			</tr>
-		</table>
-
-
-
-
-		</fieldset>
-
-
-	<div align="center">
-		<table width="99%" border="0"
-			style="border-style: solid; border-collapse: collapse"
-			cellpadding="0">
-			<tr>
-				<td align="center">
-				<button type="submit" class="button"><img
-					src="images/botao_cadastrar.jpg"></button>
-				<button type="button" class="button"><img
-					src="images/botao_voltar.jpg"></button>
-				</td>
-			</tr>
-		</table>
-	</div>
+		<td width="460" class="campoFormulario">
+		<%
+			out.println(i.getLogradouro().toUpperCase() + " "
+					+ i.getComplemento().toUpperCase() + " "
+					+ i.getNumero().toUpperCase() + " "
+					+ i.getBairro().toUpperCase() + " "
+					+ i.getCidade().toUpperCase() + "-"
+					+ i.getEstado().toUpperCase() + " " + i.getCep());
+		%>
+		</td>
+	</tr>
+	<tr>
+		<td width="460" class="campoFormulario"><br/>
+		
+				<%
+					out.println(i.getDescricao().toUpperCase());
+				%>
+		
+	
 		</td>
 	</tr>
 </table>
-</form>
 </div>
+
 
 </body>
 
