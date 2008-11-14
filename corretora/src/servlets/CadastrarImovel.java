@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import vo.Imovel;
+
+
 import facades.ImovelFacade;
 
 /**
@@ -31,7 +33,7 @@ public class CadastrarImovel extends javax.servlet.http.HttpServlet implements
 
 		ImovelFacade imovelFacade = new ImovelFacade();
 
-		Imovel i = new vo.Imovel(null, request.getParameter("nome"), request
+		Imovel i = new Imovel(null, request.getParameter("nome"), request
 				.getParameter("descricao"), request.getParameter("logradouro"),
 				request.getParameter("complemento"), request
 						.getParameter("numero"),
