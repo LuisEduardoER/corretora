@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import jdbc.JDBCImovel;
-
 import vo.Imovel;
 
 public class ImovelFacade extends SuperFacade {

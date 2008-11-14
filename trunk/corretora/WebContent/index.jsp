@@ -70,28 +70,19 @@
 				<table width="100%" border="0" cellspacing="0" cellpadding="0"
 					style="background-image: url(images/but_bg.gif)">
 					<tr>
-						<td align="right" width="3">
-						</td>
-						<td align="right"><a href="cadastro.jsp" target="principal">
-						<img border="0" alt="Home" src="images/home.gif" align="left" ></a></td>
-						<td align="right"><a href="cadastroimovel.jsp" target="principal">
-						<img border="0" alt="Home" src="images/home.gif" align="left"></a></td>
-						<td align="right">
-						<img border="0" alt="Home" src="images/home.gif" align="left"></td>
-						<td align="right">
-						<img border="0" alt="Home" src="images/home.gif" align="left"></td>
-						<td align="right">
-						<img border="0" alt="Home" src="images/home.gif" align="left"></td>
-						<td align="right">
-						<img border="0" alt="Home" src="images/home.gif" align="left"></td>
-						<td align="right">
-						<img border="0" alt="Home" src="images/home.gif" align="left"></td>
-						<td align="right">
-						<img border="0" alt="Home" src="images/home.gif" align="left"></td>
-						<td align="right">
-						<img border="0" alt="Home" src="images/home.gif" align="left"></td>
-						<td align="right">
-						<img border="0" alt="Home" src="images/home.gif" align="left"></td>
+					<%if (request.getSession().getAttribute("usuario") == null){
+						
+							out.println("<td align=\"right\">");
+							out.println("<img border=\"0\" alt=\"Home\" src=\"images/homevazio.JPG\" align=\"left\"></td>");
+					}else{
+						
+						out.println("<td align=\"right\" width=\"100%\">");
+						out.println("<a href=\"cadastro.jsp\" target=\"principal\"><img border=\"0\" alt=\"Home\" src=\"images/cadastrarpessoa.gif\"  align=\"rigth\"></a></td>");
+						out.println("<td align=\"right\">");
+						out.println("<a href=\"cadastroimovel.jsp\"  target=\"principal\"><img border=\"0\" alt=\"Home\" src=\"images/cadastrarimovel.gif\" align=\"rigth\"></td>");
+					}
+						%>
+					
 					</tr>
 				</table>
 

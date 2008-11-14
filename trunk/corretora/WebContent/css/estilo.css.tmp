@@ -1,0 +1,171 @@
+form {
+    margin: 0;
+}
+p {
+margin: 0cm 0cm 0pt;
+
+}
+
+
+
+.títulos {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-variant: normal;
+
+	color: #000066;
+
+}
+
+
+<!--
+a:link, a:visited, a:active {
+text-decoration: underline;
+}
+a:link {
+color:#94C2F5
+}
+a:visited {
+color:#94C2F5
+}
+
+a:active {
+color:#94C2F5
+}
+a:hover {text-decoration: underline; 
+background:#94C2F5; 
+color: #000099;
+}
+-->
+
+
+.links {
+	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	color: #ff0000;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+BODY {
+
+
+	background-color: #FFFFFF;
+}
+
+
+
+
+.atalho {
+text-decoration:underline;
+}
+
+
+/* Classes para Campos */
+
+
+
+.campoNaoObrigatorio,.campoSelecao, .campoObrigatorioErro,.campoObrigatorioBuscaErro , .campoObrigatorio, .campoObrigatorioBusca,.campoReadOnly, .campoLogin, .campoSemborda, .campoNoticia   {
+	border: 1pt solid #C5BFCA;
+	color: #003399;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	list-style: disc;
+	font-size: 8pt;
+	margin: 1pt 1pt 1pt 1pt;
+}
+
+
+
+
+
+/* utilizada em um campo obrigatrio */
+.campoObrigatorio:focus {
+	background:#E0E0E0;
+}
+.campoObrigatorio {
+	border: 0.5pt solid #C5BFCA;
+}
+
+.campoObrigatorioBusca {
+	border: 0.5pt solid #C5BFCA;
+	background-image: url('../autocomplete_leftcap.gif'); 
+	background-position:  right 50%; background-repeat: no-repeat
+}
+
+.campoNaoObrigatorio {
+	border: 0.5pt solid #FFC993;
+/*	border: 0.5pt solid #FF0000;*/
+
+}
+
+.campoObrigatorioErro {
+	border: 0.5pt solid #ff0000;
+
+}
+
+/* utilizada em um campo somente leitura */
+.campoReadOnly {
+	background-color: #E0EBCF;
+	border: 0.1pt solid #008145;
+/*	margin: 1pt 1pt 1pt 1pt;*/
+ padding: 1pt 1pt 1pt 2pt; 
+}
+
+
+
+
+
+.button
+{
+
+	background: #eff0f1;
+	border: 1pt solid #336ca1;
+	color: #336ca1;
+	font-family: Verdana, Helvetica, Sans-Serif;
+	font-size: 9pt;
+	margin: 1pt 1pt 1pt 1pt;
+
+}
+/* utilizado nas tabelas com os retornos das consultas */
+TD.tituloTabelaBusca {
+	background-color: #E9E8CF;
+	color: #008145;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	border-width: 0pt;
+	border-color: #ffffff;
+	border-style: solid;
+	padding: 1pt 1pt 1pt 1pt;
+	margin: 0pt 0pt 0pt 0pt ;
+	vertical-align: top;
+	text-align: Left;
+}
+/* utilizada em campos dos formularios */
+TD.campoFormulario {
+	color: #003399;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	height: 11pt;
+	padding-left: 3pt;
+	border-color: #ffffff;
+	border-style: solid;
+	border-width: 0pt;
+}
+
+TH.campoFormulario {
+	color:#008145;
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	height: 11pt;
+	font-weight: bold;
+	padding-left: 3pt;
+	border-color: #ffffff;
+	border-style: solid;
+	border-width: 0pt;
+	text-align: left;
+}

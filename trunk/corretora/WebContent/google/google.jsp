@@ -56,7 +56,7 @@ function toggle(divId) {
     <div id="map" class="myMap"></div><br><br>
     <div id="buttonArea">
     <div align="center"><form name="address" onSubmit="clickedAddAddress(); return false;">
-    Informe um EndereÃ§o: <input name="addressStr" type="text">
+    Informe um Endereço: <input name="addressStr" type="text">
     <input type="button" value="Adicionar" onClick="clickedAddAddress()">
 
     </form> </div>
@@ -64,9 +64,9 @@ function toggle(divId) {
   <form name="travelOpts">
   <table class="optionsTable">
     <tr>
-    <td><input id="walking" type="checkbox"> Andando</input><br></td>
+  <td><input id="walking" type="checkbox" >Andando</input><br/></td>
 
-    <td><input id="avoidHighways" type="checkbox"> Evitar Rodovias</input><br></td>
+    <td><input id="avoidHighways" type="checkbox">Evitar Rodovias</input><br/></td>
     </tr>
   </table>
   </form>
@@ -75,7 +75,7 @@ function toggle(divId) {
     <td><input id="button1" class="calcButton" type="button" value="Percurso Completo" onClick="directions(0, document.forms['travelOpts'].walking.checked, document.forms['travelOpts'].avoidHighways.checked)"></td>
     <td><input id="button2" class="calcButton" type="button" value="Percurso A-Z" onClick="directions(1, document.forms['travelOpts'].walking.checked, document.forms['travelOpts'].avoidHighways.checked)"></td>
 
-    <td><input id='button3' class="calcButton" type='button' value='Start Over Again' onClick='startOver()'></td>
+    <td><input id='button3' class="calcButton" type='button' value='Iniciar' onClick='startOver()'></td>
     </tr>
     </table>
 </td>
